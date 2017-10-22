@@ -58,8 +58,9 @@ htmlToText <- function(input, ...) {
   text.list <- lapply(html.list, convert_html_to_text)
   
   # STEP 3: Return text
-  text.vector <- sapply(text.list, collapse_text)
-  return(text.vector)
+  # text.vector <- sapply(text.list, collapse_text)
+  # return(text.vector)
+  return(unlist(text.list))
 }
 
 
